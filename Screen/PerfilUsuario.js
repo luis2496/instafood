@@ -1,8 +1,10 @@
 import React from 'react';
 import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 const ProfileView = () => {
 
+  const navigation = useNavigation();
   const handleEditPress = () => {
 
   }
@@ -41,7 +43,7 @@ const ProfileView = () => {
           <Text style={styles.statLabel}>Following</Text>
         </View>
       </View>
-      <TouchableOpacity style={styles.button} onPress={handleEditPress}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Submitperfil")}>
         <Text style={styles.buttonText}>Editar Perfil</Text>
       </TouchableOpacity>
     </ScrollView>

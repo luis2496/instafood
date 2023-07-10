@@ -5,6 +5,7 @@ const instafood3 = require("../assets/instafood3.png");
 import { useNavigation } from "@react-navigation/native";
 
 
+
 export default function Login({ navigation }){
 
     const [email , setEmail] = useState("");
@@ -47,7 +48,7 @@ export default function Login({ navigation }){
                 </TouchableOpacity>   
                 <View style={{marginTop:20, flexDirection: 'row', alignItems: 'center', alignSelf: 'center'}}>
                     <Text style={{color: 'gray', fontWeight: '600', fontSize: 14}}>No tiene cuenta?</Text>
-                    <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+                    <TouchableOpacity onPress={() => navigation.navigate("CrearUsuario")}>
                         <Text style={{color: '#f57c00', fontWeight: '600', fontSize: 14}}>Registar</Text>
                     </TouchableOpacity>
 

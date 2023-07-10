@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import {StyleSheet, View , Text ,Button,TextInput,Image,SafeAreaView,TouchableOpacity,StatusBar,Alert} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 const instafood3 = require("../assets/instafood2.png");
 
 export default function CrearUsuario({ navigation }){
@@ -19,7 +20,7 @@ export default function CrearUsuario({ navigation }){
                 <Image source={instafood3} style={styles.instafood3}/>
                 <View style={styles.whiteSheet}/>
                 <SafeAreaView style={styles.from}>
-                    <Text  style={styles.title}> Crear Usuario </Text>
+                    <Text  style={styles.title}> Crear Usuario  </Text>
                     <TextInput
                       style={styles.input}
                       placeholder="ingrese correo"
@@ -40,6 +41,7 @@ export default function CrearUsuario({ navigation }){
                       value={pasword}
                       onChangeText={(Text) => setPaswor(Text)}
                     />
+                     
                 <TouchableOpacity style={styles.button} onPress={onHandleCrearUsuario}>
                     <Text style={{fontWeight: 'bold' , color: '#fff', fontSize: 18}}>Registrar</Text>
                 </TouchableOpacity>   

@@ -2,14 +2,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {StyleSheet, View , Text ,Button,TextInput,Image,SafeAreaView,TouchableOpacity,StatusBar,Alert} from "react-native";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';  
 
 // importacion de screem
 import CrearUsuario from './CrearUsuario';
+import Submitperfil from './Submitperfil';
 import Home  from './Home'
 import PerfilUsuario from './PerfilUsuario';
+import Historias  from './Historias';
 import Login from './Login';
+
 //iconos
 import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
@@ -22,7 +24,7 @@ function MyStak(){
       <HomeStakNavigator.Screen
        name="login"
        component={Login}
-       options={{headerBackTitleVisible:false}
+       options={{headerShown:false}
       }
       />
       <HomeStakNavigator.Screen
@@ -30,6 +32,16 @@ function MyStak(){
       component={Home}
       options={{headerBackTitleVisible:false,}}
       />
+      <HomeStakNavigator.Screen
+      name='CrearUsuario'
+      component={CrearUsuario}
+      options={{headerBackTitleVisible:false}}
+       />
+        <HomeStakNavigator.Screen
+      name='Submitperfil'
+      component={Submitperfil}
+      options={{headerBackTitleVisible:false}}
+       />
     </HomeStakNavigator.Navigator>
 
   )
