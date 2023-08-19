@@ -8,9 +8,10 @@ export default function CrearUsuario({ navigation }){
 
         const [email , setEmail] = useState("");
         const [pasword , setPaswor] = useState("");
+        const [pasword2 , setPaswor2] = useState("");
         
         const onHandleCrearUsuario = () => {
-            if(email !== "" && pasword !== ""){
+            if(email !== "" && pasword !== "" && pasword2 !== ""  ){
                 
             }
 
@@ -37,6 +38,17 @@ export default function CrearUsuario({ navigation }){
                       autoCapitalize="none"
                       autoCorrect={false}
                       secureTextEntry={true}
+                      textContentType="password2"
+                      value={pasword2}
+                      onChangeText={(Text) => setPaswor2(Text)}
+                    />
+
+                    <TextInput 
+                      style={styles.input}
+                      placeholder="confirmar  contraseña"
+                      autoCapitalize="none"
+                      autoCorrect={false}
+                      secureTextEntry={true}
                       textContentType="password"
                       value={pasword}
                       onChangeText={(Text) => setPaswor(Text)}
@@ -47,7 +59,7 @@ export default function CrearUsuario({ navigation }){
                 </TouchableOpacity>   
                 <View style={{marginTop:20, flexDirection: 'row', alignItems: 'center', alignSelf: 'center'}}>
                     <Text style={{color: 'gray', fontWeight: '600', fontSize: 14}}>Registrate a hora?</Text>
-                    <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+                    <TouchableOpacity onPress={() => navigation.navigate("login")}>
                         <Text style={{color: '#f57c00', fontWeight: '600', fontSize: 14}}>ir al Inico</Text>
                     </TouchableOpacity>
 
